@@ -7,5 +7,7 @@ A complete Ludo environment was built in Python with a polymorphic strategy inte
 The published near-100% win rates of simple strategies against random play could not be reproduced; later enhanced-strategy results were, but the reported advantage of TD(λ) over rule-based play was not. Expectimax search over the tuned evaluation function was the strongest agent, winning 63.5% of two-player games against the heuristic at three-ply, whereas no agent exceeded the Enhanced Mixed strategy by more than 2.8 percentage points in four-player play. Analysis of game properties showed that captures occur over three times as often per player in four-player games, and the tuned weights showed the value of a capture falling from 8.5 to 2.6 steps of progress between formats, explaining why aggressive play succeeds in two-player matches and defensive play in four-player ones.
 
 The findings indicate that evaluation-function agents amplified by search are the most effective paradigm for Ludo, that simple rule-based policies remain highly competitive, and that neural reinforcement learning offers no clear advantage in a game with low branching and high dice variance.
- 
+
+# Running Instructions
+Notebook is designed to be run top to bottom. The two .pt files in the repo are the saved weights for the neural network evaluation function, with one being for two-player and one being for four-player. The code is written with the intention that these files are placed in Google Drive with the drive mounted to the notebook in Google Colab. 
 

@@ -1,0 +1,11 @@
+## Optimal Playing Strategy and AI Agents in Ludo
+## Overview
+Ludo is a widely played stochastic race game that has received little attention in games-AI research compared with chess, Go or backgammon, and the few existing studies report results that have not been independently verified. This study investigates optimal playing strategy in Ludo, asks whether AI agents can outperform rule-based play, and examines which AI paradigms are best suited to a multiplayer game of chance.
+
+A complete Ludo environment was built in Python with a polymorphic strategy interface and a trial framework for running thousands of games while recording win rate, captures made and conceded, and game length. Fourteen playing strategies were implemented: eight rule-based strategies from the literature, an original heuristic modelled on human reasoning, a linear state-evaluation function with weights tuned by Nelder-Mead optimisation and a softmax formulation for the multiplayer case, an expectimax search built on that evaluation, and a neural-network evaluator trained by TD(λ) following the TD-Gammon design. Agents were benchmarked against one another in both two-player and four-player formats.
+
+The published near-100% win rates of simple strategies against random play could not be reproduced; later enhanced-strategy results were, but the reported advantage of TD(λ) over rule-based play was not. Expectimax search over the tuned evaluation function was the strongest agent, winning 63.5% of two-player games against the heuristic at three-ply, whereas no agent exceeded the Enhanced Mixed strategy by more than 2.8 percentage points in four-player play. Analysis of game properties showed that captures occur over three times as often per player in four-player games, and the tuned weights showed the value of a capture falling from 8.5 to 2.6 steps of progress between formats, explaining why aggressive play succeeds in two-player matches and defensive play in four-player ones.
+
+The findings indicate that evaluation-function agents amplified by search are the most effective paradigm for Ludo, that simple rule-based policies remain highly competitive, and that neural reinforcement learning offers no clear advantage in a game with low branching and high dice variance.
+ 
+
